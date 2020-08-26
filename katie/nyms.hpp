@@ -22,25 +22,25 @@ class traits // this is where I store all available traits for nyms
 	//ie. if it lands on 0 for hair the hair colour would be blue.
 	// it doesn't quite work yet, i'm probably missing something.
 		int		gen_hair(void){
-			return ((rand() % 6));
+			return ((rand() % 5));
 		}
 		int		gen_eyes(void){
-			return ((rand() % 6));
+			return ((rand() % 5));
 		}
 		int		gen_skin(void){
-			return ((rand() % 4));
+			return ((rand() % 3));
 		}
 		int		gen_trait_1(void){
-			return ((rand() % 4));
+			return ((rand() % 3));
 		}
 		int		gen_trait_2(void){
-			return ((rand() % 4));
+			return ((rand() % 3));
 		}
 		int		gen_trait_3(void){
-			return ((rand() % 4));
+			return ((rand() % 3));
 		}
 		int		gen_trait_4(void){
-			return ((rand() % 4));
+			return ((rand() % 3));
 		}
 		// retrieve trait, these are used when the uses executes a 'view' command
 		// it gets the correct trait from the list. ie. if type = 0 for hair
