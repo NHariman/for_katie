@@ -9,18 +9,18 @@ using namespace std; // this is so I don't have to keep writing std::
 nyms::nyms(void) // this is the main function! it waits for input
 {
 	string command;
-	int i;
+	int turns;
 
-	i = 0;
+	turns = 0;
     cout << "First let's name your first nyms.\n";
     cout << "Name nym 1:\n";
     getline(cin, command);
     user_nyms[0].set_name(command);
+    user_nyms[0].generate_nym();
     cout << "Name nym 2:\n";
     getline(cin, command);
     user_nyms[1].set_name(command);
-    user_nyms[0].generate_nym(user_nyms[0]);
-    user_nyms[1].generate_nym(user_nyms[1]);
+    user_nyms[1].generate_nym();
 	cout << "Please enter your command now:" << endl;
     cin >> command; // this is where it waits and gets the input
     while (command.compare("exit") != 0) //as long as the user doesn't write exit, the program will keep going.
@@ -39,6 +39,7 @@ nyms::nyms(void) // this is the main function! it waits for input
             cout << "Sorry, that command does not exist." << endl;
             cout << "Write: view to view your nyms, generate to create new ones or exit to leave" << endl;
         }
+        turns++;
         cout << "Anything else?" << endl;
         cin >> command; // this part allows the loop to keep listening for input.
     }
